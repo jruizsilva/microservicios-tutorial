@@ -13,8 +13,6 @@ eureka:
 spring:
   application:
     name: gateway-service
-  jpa:
-    show-sql: true
   cloud:
     gateway:
       discovery:

@@ -9,8 +9,7 @@ import userservice.models.Moto;
 
 import java.util.List;
 
-@FeignClient(name = "moto-service",
-             url = "http://localhost:8003")
+@FeignClient(name = "moto-service")
 public interface MotoFeignClient {
     @PostMapping("/motos")
     public Moto save(@RequestBody Moto moto);
