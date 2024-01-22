@@ -40,7 +40,7 @@ public class UserService {
 
     public List<Car> findAllCarsByUserId(Long userId) {
         ResponseEntity<List<Car>> responseEntity =
-                restTemplate.exchange("http://localhost:8080/cars/user/" + userId,
+                restTemplate.exchange("http://car-service/cars/user/" + userId,
                                       HttpMethod.GET,
                                       null,
                                       new ParameterizedTypeReference<>() {
@@ -50,7 +50,7 @@ public class UserService {
 
     public List<Moto> findAllMotosByUserId(Long userId) {
         ResponseEntity<List<Moto>> responseEntity =
-                restTemplate.exchange("http://localhost:8080/motos/user/" + userId,
+                restTemplate.exchange("http://moto-service/motos/user/" + userId,
                                       HttpMethod.GET,
                                       null,
                                       new ParameterizedTypeReference<>() {
